@@ -9,7 +9,7 @@
 3. Llama a la duncion imprimir Nombres para mostrar
    todos los nombres.*/
 
-const grupo =  [ {
+let grupo =  [ {
 
     nombre: "Heber",
     apellido: "Zurita"
@@ -62,10 +62,14 @@ const grupo =  [ {
   }
 ]
 
-function ImprimirNombres (){
+function listaNombres (){
 
-    console.log(grupo)
+    let lista = document.getElementById("lista");
+    lista.innerHTML = "";
 
+    for(let i = 0; 1 < grupo.length; i++){
+      let li = document.createElement("li");
+      li.textContent = grupo[i].nombre + " " + grupo[i].apellido;
+      lista.appendChild[li];
+    }
 }
-
-ImprimirNombres()
